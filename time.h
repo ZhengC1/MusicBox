@@ -1,7 +1,11 @@
-// DURATION OF THE NOTES 
-#define BPM 240 //  you can change this value changing all the others
-#define HALF 2*QUARTER //half 2/4
-#define QUARTER 60000/BPM //quarter 1/4 
-#define EIGTH QUARTER/2   //eighth 1/8
-#define SIXTEENTH QUARTER/4 // sixteenth 1/16
-#define WHOLE 4*QUARTER // whole 4/4
+/**  
+* DURATION OF THE NOTES
+* I think most of this is
+* self-explainatory
+*/
+#define BPM 240
+#define HALF 2*QUARTER 
+#define QUARTER 60000/BPM  
+#define EIGTH QUARTER/2   
+#define SIXTEENTH QUARTER/4 
+#define WHOLE 4*QUARTER 

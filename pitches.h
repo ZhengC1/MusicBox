@@ -1,5 +1,7 @@
 /*************************************************
  * Public Constants
+ * This file was taken from the system default
+ * provided files
  *************************************************/
 
 #define NOTE_B0  31

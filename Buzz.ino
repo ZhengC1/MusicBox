@@ -9,7 +9,13 @@ void loop() {
   firstStanza();
   exit(0);
 }
-
+/**
+  This is the First stanza in the song "i'm alive" 
+  from the Portal game
+  
+  the score was found here
+  https://www.scribd.com/doc/176716725/I-m-Alive-Next-to-Normal
+*/
 void firstStanza() {
   tone(12, NOTE_G6 , QUARTER); delay(QUARTER + 1);
   tone(12, NOTE_F6, QUARTER); delay(QUARTER + 1);
