@@ -28,13 +28,23 @@ E -> DS
 F E A A B B C A E 
 */
 void firstStanza() {
-  int notes[9] = {
-    NOTE_F5, NOTE_DS5, NOTE_GS5, NOTE_GS5, NOTE_AS5, NOTE_AS5, NOTE_C6, NOTE_GS5, NOTE_DS5
+  int notes[LEN] = {
+    NOTE_F5, NOTE_DS5, NOTE_GS5, NOTE_GS5, NOTE_AS5,
+    NOTE_AS5, NOTE_C6, NOTE_GS5, NOTE_DS5,
+    NOTE_F5, NOTE_DS5, NOTE_GS5, NOTE_GS5, NOTE_AS5, NOTE_F5,
+    NOTE_GS5, 0 , 0
   };
   
-  for(int i = 0; i < 9; i++)
+  int duration[LEN] = {
+    EIGHTH, EIGHTH, QUARTER, QUARTER, QUARTER,
+    QUARTER, QUARTER, QUARTER, QUARTER, 
+    EIGHTH, EIGHTH, QUARTER, QUARTER, EIGHTH, EIGHTH,
+    QUARTER, QUARTER, HALF
+  };
+  
+  for(int i = 0; i < LEN; i++)
   {
-    tone(11, notes[i], QUARTER); delay(QUARTER+1);
+    tone(11, notes[i], duration[i]); delay(duration[i] + 1);
   }
   noTone(11);
   

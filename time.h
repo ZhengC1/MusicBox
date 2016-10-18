@@ -6,6 +6,8 @@
 #define BPM 120
 #define HALF 2*QUARTER 
 #define QUARTER 60000/BPM  
-#define EIGTH QUARTER/2   
+#define EIGHTH QUARTER/2   
 #define SIXTEENTH QUARTER/4 
 #define WHOLE 4*QUARTER 
+
+#define LEN 18
