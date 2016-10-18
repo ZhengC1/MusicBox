@@ -4,6 +4,7 @@
 void setup() {
   pinMode(11, OUTPUT);
   firstStanza();
+  noTone(11);
 }
 /**
    Changed it to the song to "Dango Daikazoku"
@@ -23,29 +24,41 @@ B -> AS
 D -> CS
 E -> DS
 */
-
-/**
-F E A A B B C A E 
-*/
-void firstStanza() {
+void chorus() {
   int notes[LEN] = {
     NOTE_F5, NOTE_DS5, NOTE_GS5, NOTE_GS5, NOTE_AS5,
     NOTE_AS5, NOTE_C6, NOTE_GS5, NOTE_DS5,
-    NOTE_F5, NOTE_DS5, NOTE_GS5, NOTE_GS5, NOTE_AS5, NOTE_F5,
-    NOTE_GS5, 0 , 0
+    NOTE_F5, NOTE_DS5, NOTE_GS5, NOTE_GS5, NOTE_AS5
   };
-  
+
   int duration[LEN] = {
     EIGHTH, EIGHTH, QUARTER, QUARTER, QUARTER,
-    QUARTER, QUARTER, QUARTER, QUARTER, 
-    EIGHTH, EIGHTH, QUARTER, QUARTER, EIGHTH, EIGHTH,
+    QUARTER, QUARTER, QUARTER, QUARTER,
+    EIGHTH, EIGHTH, QUARTER, QUARTER, EIGHTH
+  };
+
+  runStanza(notes, duration, LEN);
+}
+
+void firstStanza() {
+  chorus();
+  int notes[4] = {
+    NOTE_F5,
+    NOTE_GS5, 0 , 0
+  };
+
+  int duration[4] = {
+    EIGHTH,
     QUARTER, QUARTER, HALF
   };
-  
-  for(int i = 0; i < LEN; i++)
-  {
-    tone(11, notes[i], duration[i]); delay(duration[i] + 1);
-  }
-  noTone(11);
-  
+
+  runStanza(notes, duration, 4); 
+  chorus();
+}
+
+void runStanza(int* notes, int* durations, int len) {
+  for (int i = 0; i < len; i++) {
+    tone(11, notes[i], durations[i]);
+    delay(durations[i] + 1);
+  } 
 }
