@@ -1,5 +1,5 @@
 # MusicBox
-Music Box for the Woman
+Music Box 
 
 ## Disclaimer
 >I don't know anything about music so i had to learn how to read music, 
@@ -14,7 +14,8 @@ Music Box for the Woman
 ## Demos
 ### Portal Song
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Q-HaUQtmpfM/0.jpg)](https://www.youtube.com/watch?v=Q-HaUQtmpfM)
-###Dango Song
+
+### Dango Song
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mQZ9YfnFsbE/0.jpg)](https://www.youtube.com/watch?v=mQZ9YfnFsbE)
 
 ## Acknowledgments
